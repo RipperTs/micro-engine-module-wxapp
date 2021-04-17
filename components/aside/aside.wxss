@@ -1,0 +1,87 @@
+/* @import '../../iconfont/iconfont.wxss'; */
+.aside-box {
+    width: 70rpx;
+    border-radius: 35rpx;
+    background: #fff;
+    overflow: hidden;
+    position: fixed;
+    top: 60%;
+    right: 20rpx;
+    box-shadow: -1rpx -1rpx 10rpx 1rpx rgba(0,0,0,0.05),1rpx 1rpx 10rpx 1rpx rgba(0,0,0,0.05);
+}
+.aside-box .btn {
+    width: 100% !important;
+    padding: 20rpx 0;
+    margin: 0;
+    border-radius: 0;
+}
+.aside-box .t-icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+.aside-box .text {
+    font-weight: 400;
+    margin-top: -10rpx;
+}
+.aside-box .share-btn,
+.aside-box .waring-btn {
+    border-bottom: 1rpx solid #e8e8ee;
+}
+.rule-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.rule-bg {
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.rule-box .rule-content {
+    height: 680rpx;
+    width: 530rpx;
+    background: #fff;
+    padding: 100rpx 20rpx 20rpx 20rpx;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+}
+.rule-box .rule-content .iconchahao {
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 60rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+}
+.rule-box .rule-content .title {
+    font-size: 28rpx;
+    font-weight: bold;
+    padding-left: 20rpx;
+    position: relative;
+}
+.rule-box .rule-content .title::before {
+    content: "";
+    width: 6rpx;
+    background: #f71d3c;
+    border-radius: 6rpx;
+    position: absolute;
+    top: 5rpx;
+    left: 0;
+    bottom: 5rpx;
+}
+.rule-box .rule-content .text {
+    display: block;
+    margin-top: 20rpx;
+    color: #666;
+    font-weight: bold;
+}

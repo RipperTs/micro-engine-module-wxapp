@@ -1,0 +1,45 @@
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<l-loading show="{{reLoading}}" full-screen="{{true}}" bg-color="#ff000000" color="#3F75F3" type="change"></l-loading>
+
+        <!-- 分类tab -->
+<view class="header">
+    <scroll-view scroll-x scroll-left style="height: 100%;">
+        <view class="cs {{ category_id ==  0 ? 'active' : '' }}" catchtap="onSwitchTab" data-id="0">
+            <text style="font-weight: 500">全部</text>
+        </view>
+        <!-- 分类列表 -->
+        <view class="cs {{  item.category_id == category_id ? 'active' : '' }}" catchtap="onSwitchTab"
+              wx:for="{{ categoryList }}" wx:key="this" data-id="{{ item.category_id }}">
+            <text style="font-weight: 500">{{ item.name }}</text>
+        </view>
+    </scroll-view>
+</view>
+
+        <!-- 文章列表 -->
+<view class="article-list">
+    <scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{scrollHeight}}px;">
+        <view class="article-box article-item show-type__{{ item.show_type }}" wx:for="{{ articleList.data }}"
+              wx:key="this"
+              catchtap="onTargetDetail" data-id="{{ item.article_id }}">
+            <!-- 小图模式 -->
+            <block wx:if="{{ item.show_type == 10 }}">
+                <view class="article-list">
+                    <image src="{{ item.image.file_path }}" style="width: 240rpx;height: 186rpx;"></image>
+                    <view class="article-content">
+                        <view class="title">{{ item.article_title }}</view>
+                        <view class="content">{{ item.summary }}</view>
+                        <navigator hover-class="none" url="/pages/article/detail/index?article_id={{item.article_id}}"
+                                   class="btn-box">
+                            <view class="btn-cat">查看文章</view>
+                        </navigator>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view wx:if="{{ no_more }}" class="no-more f-20" style="color: #aaa;">--- 到底了，没有更多了 ---</view>
+        <!-- 无数据提供的页面 -->
+        <view wx:if="{{ !isLoading && !articleList.data.length }}">
+            <van-empty description="暂无文章数据"/>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/article/index",
+        "pages/article/detail/index",
+        "pages/dealer/index/index",
+        "pages/dealer/apply/apply",
+        "pages/dealer/order/order",
+        "pages/dealer/team/team",
+        "pages/dealer/withdraw/apply/apply",
+        "pages/dealer/withdraw/list/list",
+        "pages/dealer/qrcode/qrcode",
+        "pages/member/faq",
+        "pages/member/contact",
+        "pages/member/recharge/index",
+        "pages/member/recharge/order/index",
+        "pages/member/member",
+        "pages/generate/create",
+        "pages/generate/detail",
+        "pages/generate/log",
+        "pages/generate/list",
+        "pages/generate/edit"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "展示上门自提门店位置"
+        }
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "赋能工具",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#3F75F3",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/icon1-1@2x.png",
+                "selectedIconPath": "images/icon1@2x.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/article/index",
+                "iconPath": "images/icon2-2@2x.png",
+                "selectedIconPath": "images/icon2@2x.png",
+                "text": "教程"
+            },
+            {
+                "pagePath": "pages/member/member",
+                "iconPath": "images/icon3-3@2x.png",
+                "selectedIconPath": "images/icon3@2x.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "l-loading": "/dist/loadinger/index",
+        "ajax-loading": "/components/ajax_loading/ajax_loading",
+        "van-image": "/dist/image/index",
+        "van-notify": "/dist/notify/index",
+        "van-empty": "/dist/empty/index",
+        "van-divider": "/dist/divider/index"
+    }
+}

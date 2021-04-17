@@ -1,0 +1,50 @@
+.container {
+    background: #fff;
+    font-size: 24rpx;
+    color: #333;
+}
+.about-box {
+    text-align: center;
+    padding: 40rpx 20rpx;
+}
+.about-box .title {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.about-box .content {
+    color: #666;
+    margin-top: 40rpx;
+    line-height: 2;
+}
+.contact-list {
+    padding: 0 20rpx;
+}
+.contact-list .list-item {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #e8e8e8;
+}
+.contact-list .list-item .icon-box {
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background: #3372FC;
+    text-align: center;
+}
+.contact-list .list-item .iconfont {
+    display: inline;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    color: #fff;
+}
+.contact-list .list-item .content-box {
+    margin-left: 100rpx;
+}
+.contact-list .list-item .title {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.contact-list .list-item .content {
+    margin-top: 10rpx;
+    color: #666;
+}

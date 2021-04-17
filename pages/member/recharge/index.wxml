@@ -1,0 +1,59 @@
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<l-loading show="{{reLoading}}" full-screen="{{true}}" bg-color="#ff000000" color="#3F75F3" type="change"></l-loading>
+<view class="container" wx:if="{{ userInfo.user_id }}">
+    <view class="account-panel dis-flex flex-y-center">
+        <view class="panel-lable" wx:if="{{ type == 10 }}">
+            <text>赋能次数</text>
+        </view>
+        <view class="panel-lable" wx:if="{{ type == 20 }}">
+            <text>到期时间</text>
+        </view>
+        <view class="panel-balance flex-box" wx:if="{{ type == 10 }}">
+            <text>{{ userInfo.balance }} 次</text>
+        </view>
+        <view class="panel-balance flex-box" wx:if="{{ type == 20 }}">
+            <text style="font-size: 28rpx;line-height: 240rpx;">{{ userInfo.vip_expire_date }}</text>
+        </view>
+    </view>
+    <view class="recharge-panel">
+        <view class="recharge-label">
+            <text wx:if="{{ type == 10 }}">充值套餐</text>
+            <text wx:if="{{ type == 20 }}">会员套餐</text>
+        </view>
+        <view class="recharge-plan clear">
+            <block wx:for="{{ planList }}" wx:key="this">
+                <view class="recharge-plan_item {{ selectedPlanId == item.plan_id ? 'active' : '' }}"
+                      catchtap="onSelectPlan" data-id="{{ item.plan_id }}">
+                    <view class="plan_money">
+                        <text>￥{{ item.money }}</text>
+                    </view>
+                    <view class="plan_gift" wx:if="{{ item.gift_money > 0 && type == 10}}">
+                        <text>送{{ item.gift_money }}次</text>
+                    </view>
+                    <view class="plan_gift" wx:if="{{ item.duration > 0 && type == 20}}">
+                        <text>{{ item.duration }}个月</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <!-- 手动充值输入框 -->
+        <view class="recharge-input" wx:if="{{ setting.is_custom == '1' && type == 10 }}">
+            <input type="digit" placeholder="请输入充值金额" value="{{ inputValue }}" bindinput="bindMoneyInput"/>
+        </view>
+        <!-- 确认按钮 -->
+        <view class="recharge-submit btn-submit">
+            <form bindsubmit="onSubmit" report-submit="true">
+                <button formType="submit" disabled="{{ disabled }}">{{btn_text}}</button>
+            </form>
+        </view>
+    </view>
+    <!-- 充值描述 -->
+    <view class="recharge-describe">
+        <view class="recharge-label">
+            <text>充值说明</text>
+        </view>
+        <view class="content">
+            <text space="ensp">{{ setting.describe }}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!-- <canvas canvas-id="skeleton" disable-scroll="true"></canvas> -->
+<view class="custom " style="padding-top:{{statusBarHeight}}px">
+    <view class='title-container'>
+        <view class='capsule' wx:if="{{ back || home }}">
+            <view bindtap='back' wx:if="{{back}}" data-url="{{backUrl}}">
+                <image src='../../images/back.svg'></image>
+            </view>
+            <view bindtap='backHome' wx:if="{{home}}">
+                <image src='../../images/home.svg'></image>
+            </view>
+        </view>
+        <view class='title'>{{navigationBarTitle}}</view>
+    </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>

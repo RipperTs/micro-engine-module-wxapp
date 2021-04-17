@@ -1,0 +1,25 @@
+.container {
+    padding: 20rpx;
+    background: #fff;
+    font-size: 24rpx;
+    color: #333;
+}
+.faq-list {
+    margin-top: 20rpx;
+}
+.faq-list .list-item {
+    position: relative;
+    border-radius: 15rpx;
+    overflow: hidden;
+    margin: 20rpx 0;
+    box-shadow: -2px -2px 15px 1px rgba(0,0,0,0.05),2px 2px 15px 1px rgba(0,0,0,0.05);
+}
+.faq-list .list-item .title {
+    font-size: 28rpx;
+    padding: 30rpx 20rpx;
+}
+.faq-list .list-item .content {
+    color: #666;
+    padding: 20rpx;
+    border-top: 1rpx solid #e8e8ee;
+}

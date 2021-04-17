@@ -1,0 +1,131 @@
+.diy-sharpGoods .sharp-top .sharp-modular {
+  font-size: 30rpx;
+  color: #fff;
+  background: #fb571d;
+  padding: 10rpx 30rpx 10rpx 24rpx;
+  border-bottom-right-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.diy-sharpGoods .sharp-top .sharp-modular .modular-name {
+  margin-left: 10rpx;
+}
+
+.diy-sharpGoods .sharp-top .sharp-active-status {
+  color: #616161;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.diy-sharpGoods .sharp-top .active-count-down {
+  font-size: 26rpx;
+  height: 40rpx;
+  margin-left: 16rpx;
+}
+
+.diy-sharpGoods .sharp-top .active-count-down .clock-text {
+  margin-right: 10rpx;
+}
+
+.diy-sharpGoods .sharp-top .active-count-down .clock-time {
+  background: #252525;
+  color: #fff;
+  padding: 0 6rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+}
+
+.diy-sharpGoods .sharp-top .active-count-down .clock-symbol {
+  padding: 0 8rpx;
+}
+
+.diy-sharpGoods .sharp-top .sharp-more {
+  padding-right: 24rpx;
+  color: #616161;
+  font-size: 28rpx;
+}
+
+.diy-sharpGoods .sharp-top .sharp-more .sharp-more-arrow {
+  font-size: 24rpx;
+}
+
+/* 商品组 */
+
+.diy-sharpGoods .goods-list {
+  padding: 4rpx;
+  box-sizing: border-box;
+}
+
+.diy-sharpGoods .goods-list .goods-item {
+  box-sizing: border-box;
+  padding: 6rpx;
+}
+
+.diy-sharpGoods .goods-list.display__list .goods-item {
+  float: left;
+}
+
+.diy-sharpGoods .goods-list.column__2 .goods-item {
+  width: 50%;
+}
+
+.diy-sharpGoods .goods-list.column__3 .goods-item {
+  width: 33.33333%;
+}
+
+.diy-sharpGoods .goods-list .goods-item .goods-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.diy-sharpGoods .goods-list .goods-item .goods-image:after {
+  content: '';
+  display: block;
+  margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
+}
+
+.diy-sharpGoods .goods-list .goods-item .goods-image .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail {
+  padding: 4rpx;
+  background: #fff;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail .goods-name {
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail .detail-price {
+  line-height: 40rpx;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail .goods-price {
+  font-size: 30rpx;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail .line-price {
+  margin-left: 8rpx;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.diy-sharpGoods .goods-list .goods-item .detail .selling-point {
+  font-size: 24rpx;
+  color: #f20c59;
+}

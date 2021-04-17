@@ -1,0 +1,17 @@
+var tool = {
+    // 返回带*手机号
+    starString: function (n) {
+        return n.replace(n.substring(4, n.length - 4), '****');
+    },
+    toFix: function (value) {
+        return parseFloat(value).toFixed(2) // 此处2为保留两位小数，保留几位小数，这里写几
+    },
+    strSplit: function (str, symbol) {
+        return str.split(symbol);
+    }
+}
+module.exports = {
+    starString: tool.starString,
+    toFix: tool.toFix,
+    strSplit: tool.strSplit
+}

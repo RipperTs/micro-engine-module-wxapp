@@ -1,0 +1,209 @@
+page {
+    background: #fff;
+    padding-bottom: 60rpx;
+}
+
+.container {
+    background: #fff;
+}
+
+.separate {
+    width: 100%;
+    height: 20rpx;
+    background: #f7f7f7;
+    clear: both;
+}
+
+.tabber-box {
+    width: 100%;
+    height: 206rpx;
+    padding: 0 20rpx;
+    display: flex;
+    align-items: center; /* 垂直居中*/
+}
+
+.tabber-box .icon-box {
+    width: 25%;
+    height: 150rpx;
+    float: left;
+}
+
+.tabber-box .icon-box .con-box {
+    margin-left: 40rpx;
+}
+
+.tabber-box .icon-box .con-box image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 8rpx;
+}
+
+.tabber-box .icon-box .con-box .text {
+    margin-top: 10rpx;
+    font-weight: 500;
+}
+
+.banner-box {
+    width: 100%;
+    height: 130rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    margin-top: 55rpx;
+}
+
+.banner-box .banner-slide {
+    width: 690rpx;
+    height: 200rpx;
+}
+
+.banner-item .banner-item {
+    width: 100%;
+    border-radius: 10rpx;
+}
+
+.banner-item .banner-item image {
+    border-radius: 10rpx;
+}
+
+.title-box {
+    width: 100%;
+    height: 60rpx;
+    margin-top: 70rpx;
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.title-box .vertical-line {
+    width: 6rpx;
+    height: 26rpx;
+    background: linear-gradient(180deg, #3372FC 0%, #2E6DF7 100%);
+    border-radius: 4rpx;
+    float: left;
+}
+
+.title-box .text {
+    float: left;
+    margin-left: 15rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.features-box {
+    width: 100%;
+    padding: 0 20rpx;
+    min-height: 400rpx;
+}
+
+.features-box .features {
+    width: 50%;
+    height: 320rpx;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20rpx;
+    padding-bottom: 30rpx;
+}
+
+.features-box .features image {
+    width: 320rpx;
+    height: 320rpx;
+    border-radius: 10rpx;
+}
+
+.features-box .features .title {
+    width: 60%;
+    height: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 40rpx;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    color: #F8F9F9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.features-box .features .sub-title {
+    width: 70%;
+    height: 40rpx;
+    position: absolute;
+    top: 60rpx;
+    left: 40rpx;
+    color: #F8F9F9;
+    font-size: 20rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.article-box {
+    width: 100%;
+    padding: 20rpx 30rpx;
+}
+
+.article-box .article-list {
+    width: 100%;
+    height: 200rpx;
+    float: left;
+
+    margin-top: 30rpx;
+}
+
+.article-box .article-list image {
+    width: 240rpx;
+    height: 186rpx;
+    border-radius: 10rpx;
+    float: left;
+
+}
+
+.article-list .article-content {
+    width: 425rpx;
+    height: 100%;
+    float: left;
+    margin-left: 20rpx;
+}
+
+.article-list .article-content .title {
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 28rpx;
+    font-weight: 500;
+
+}
+
+.article-list .article-content .content {
+    width: 100%;
+    height: 70rpx;
+    margin-top: 10rpx;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article-list .btn-box {
+    width: 100%;
+    height: 60rpx;
+    margin-top: 20rpx;
+}
+
+.article-list .btn-box .btn-cat {
+    width: 200rpx;
+    height: 50rpx;
+    background: linear-gradient(307deg, #2161EB 3%, #3473FD 100%);
+    border-radius: 15px;
+    color: #fff;
+    line-height: 50rpx;
+    text-align: center;
+}

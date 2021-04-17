@@ -1,0 +1,43 @@
+<!-- content.wxml -->
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<l-loading show="{{reLoading}}" full-screen="{{true}}" bg-color="#ff000000" color="#3F75F3" type="change"></l-loading>
+<view class="container skeleton">
+    <!--  member  -->
+    <view class="about-box skeleton-rect">
+        <view class="title">关于我们</view>
+        <view class="content">{{about.content}}</view>
+    </view>
+    <!--  member end -->
+    <view class="divider-line"></view>
+    <!-- contact -->
+    <view class="contact-list">
+        <view class="list-item clearfix">
+            <view class="icon-box skeleton-rect">
+                <view class="iconfont iconkefu" style="font-size: 54rpx;"></view>
+            </view>
+            <view class="content-box">
+                <view class="title skeleton-rect">联系电话/微信</view>
+                <view class="content skeleton-rect">{{about.tel}}</view>
+            </view>
+        </view>
+        <view class="list-item clearfix">
+            <view class="icon-box skeleton-rect">
+                <view class="iconfont iconyouxiang"></view>
+            </view>
+            <view class="content-box">
+                <view class="title skeleton-rect">联系邮箱</view>
+                <view class="content skeleton-rect">{{about.email}}</view>
+            </view>
+        </view>
+        <view class="list-item clearfix">
+            <view class="icon-box skeleton-rect">
+                <view class="iconfont icondizhi"></view>
+            </view>
+            <view class="content-box">
+                <view class="title skeleton-rect">联系地址</view>
+                <view class="content skeleton-rect">{{about.address}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- contact end -->
+</view>

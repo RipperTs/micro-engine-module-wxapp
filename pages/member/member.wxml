@@ -1,0 +1,89 @@
+<!-- member.wxml -->
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<l-loading show="{{reLoading}}" full-screen="{{true}}" bg-color="#ff000000" color="#3F75F3" type="change"></l-loading>
+<view class="container skeleton">
+    <!-- not-logged -->
+    <view class="not-logged-box" wx:if="{{!isLogin}}">
+        <view class="not-logged">
+            <view class="title">登录验证</view>
+            <view class="text-box">
+                <view class="text">登录即可查看个人中心</view>
+            </view>
+            <view class="btn-group">
+                <view class="btn-list">
+                    <navigator open-type="switchTab" url="/pages/index/index" hover-class="none" class="btn return">
+                        返回首页
+                    </navigator>
+                    <navigator url="/pages/login/login" hover-class="none" class="btn login">去登录</navigator>
+                </view>
+            </view>
+        </view>
+        <view class="bg"></view>
+    </view>
+    <view wx:else>
+        <!--    用户信息+背景图    -->
+        <view class="member-header skeleton-rect">
+            <view class="detail-box">
+                <view class="avatar-box skeleton-rect">
+                    <image class="avatar" src="{{userInfo.avatarUrl}}"/>
+                </view>
+                <view class="detail">
+                    <view class="name">{{userInfo.nickName}}</view>
+                    <view class="level">
+                        <view class="level-btn">到期时间：{{userInfo.vip_expire_date}}</view>
+                    </view>
+                </view>
+            </view>
+            <navigator url="/pages/member/recharge/index?type=20" hover-class="none" class="btn-vip">充值VIP</navigator>
+            <image src="/images/bg@2x.png" class="member-bg"/>
+        </view>
+        <!--   功能模块     -->
+        <view class="module-box">
+            <view class="menu-box">
+                <view class="frequency-box">
+                    <image src="/images/funengcishu.png"></image>
+                    <view class="text">赋能次数：{{ userInfo.balance }} 次</view>
+                    <navigator url="/pages/member/recharge/index?type=10" hover-class="none" class="recharge-btn">充值次数</navigator>
+                </view>
+                <view class="title-box">
+                    <view class="vertical-line"></view>
+                    <view class="text">我的应用</view>
+                </view>
+                <view class="apps-box">
+                    <navigator url="/pages/generate/list" hover-class="none" class="app">
+                        <view class="iconfont iconfunengjilu ico"></view>
+                        <view class="text">赋能记录</view>
+                    </navigator>
+                    <navigator url="/pages/dealer/index/index" hover-class="none" class="app">
+                        <view class="iconfont icondailixinxi ico" style="color: #DF6534"></view>
+                        <view class="text">分销中心</view>
+                    </navigator>
+                    <navigator url="/pages/member/faq" hover-class="none" class="app">
+                        <view class="iconfont iconchangjianwenti ico" style="color: #8C36F8"></view>
+                        <view class="text">常见问题</view>
+                    </navigator>
+                    <navigator url="/pages/member/recharge/order/index" hover-class="none" class="app">
+                        <view class="iconfont iconchongzhijilu ico" style="color: #5FCB73;"></view>
+                        <view class="text">充值记录</view>
+                    </navigator>
+                    <navigator url="/pages/member/contact" hover-class="none" class="app">
+                        <view class="iconfont iconguanyuwomen ico" style="color: #DD5352"></view>
+                        <view class="text">关于我们</view>
+                    </navigator>
+                    <view class="app">
+                        <button open-type="contact" style="margin-top: -10rpx;width: 100rpx">
+                            <view class="iconfont iconkefu ico" style="color: #E59336"></view>
+                            <view class="text">联系客服</view>
+                        </button>
+                    </view>
+                </view>
+                <view class="btn-outlogin" bind:tap="outLogin">
+                    退出登陆
+                </view>
+<!--                <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="btn-outlogin" >-->
+<!--                    退出登陆-->
+<!--                </button>-->
+            </view>
+        </view>
+    </view>
+</view>

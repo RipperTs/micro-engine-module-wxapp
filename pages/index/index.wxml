@@ -1,0 +1,87 @@
+<!-- index.wxml -->
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<l-loading show="{{reLoading}}" full-screen="{{true}}" bg-color="#ff000000" color="#3F75F3" type="change"></l-loading>
+<view class="container skeleton">
+    <view class="tabber-box">
+        <view class="icon-box">
+            <navigator url="/pages/member/recharge/index?type=20" hover-class="none" class="con-box">
+                <image src="/images/huiyuan@2x.png" mode="widthFix"></image>
+                <view class="text">开通会员</view>
+            </navigator>
+        </view>
+        <navigator url="/pages/article/index" hover-class="none" open-type="switchTab" class="icon-box">
+            <view class="con-box">
+                <image src="/images/jiaocheng.png" mode="widthFix"></image>
+                <view class="text">使用教程</view>
+            </view>
+        </navigator>
+        <navigator url="/pages/article/index" hover-class="none" open-type="switchTab" class="icon-box">
+            <view class="con-box">
+                <image src="/images/wenzhang.png" mode="widthFix"></image>
+                <view class="text">推荐文章</view>
+            </view>
+        </navigator>
+        <navigator url="/pages/member/member" hover-class="none" open-type="switchTab" class="icon-box">
+            <view class="con-box">
+                <image src="/images/zhonghxin@2x.png" mode="widthFix"></image>
+                <view class="text">个人中心</view>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="separate"></view>
+
+    <!--  banner  -->
+    <view class="banner-box">
+        <swiper indicator-dots autoplay interval="5000" duration="1000" class="banner-slide"
+                indicator-color="rgba(255, 255, 255, 1)" indicator-active-color="#F74E4E">
+            <block wx:for="{{bannerList}}" wx:key="index">
+                <swiper-item class="banner-item">
+                    <image src="{{item.image.file_path}}" mode="widthFix" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <!--  功能模块  -->
+
+    <view class="title-box">
+        <view class="vertical-line"></view>
+        <view class="text">推荐功能</view>
+    </view>
+    <!-- 模块列表 -->
+    <view class="features-box">
+        <view class="features" wx:for="{{ featuresList }}" wx:key="index" bind:tap="toGenerate"
+              data-id="{{ item.features_id }}">
+            <image src="{{ item.image.file_path }}" mode="widthFix"></image>
+            <view class="title">{{ item.title }}</view>
+            <view class="sub-title">{{ item.sub_title }}</view>
+        </view>
+    </view>
+    <view class="separate"></view>
+    <!--  推荐文章列表  -->
+    <view class="title-box" style="margin-top: 20rpx;">
+        <view class="vertical-line"></view>
+        <view class="text">推荐文章</view>
+    </view>
+
+    <view class="article-box">
+        <view wx:if="{{ articleList.length }}">
+            <view class="article-list" wx:for="{{ articleList }}" wx:key="index">
+                <image src="{{ item.image.file_path }}"></image>
+                <view class="article-content">
+                    <view class="title">{{ item.article_title }}</view>
+                    <view class="content">{{ item.summary }}</view>
+                    <navigator hover-class="none" url="/pages/article/detail/index?article_id={{item.article_id}}"
+                               class="btn-box">
+                        <view class="btn-cat">查看文章</view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{ !articleList.length }}">
+            <van-empty description="暂无文章数据" />
+        </view>
+    </view>
+
+</view>

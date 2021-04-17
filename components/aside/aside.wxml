@@ -1,0 +1,30 @@
+<view class="aside-box">
+    <button class="share-btn btn" open-type="contact">
+        <icon class="t-icon iconkefu" />
+        <view class="text">客服</view>
+    </button>
+    <button class="waring-btn btn" bindtap="showRule">
+        <icon class="t-icon icontixing" />
+        <view class="text">规则</view>
+    </button>
+    <button class="share-btn btn" open-type="share">
+        <icon class="t-icon iconfenxiang1" />
+        <view class="text">分享</view>
+    </button>
+</view>
+<view class="rule-box" wx:if="{{isShow || isRuleShow}}">
+    <view class="rule-content">
+        <view class="iconfont iconchahao" bindtap="closeRule"></view>
+        <scroll-view class="scroll clearfix" scroll-y>
+            <view class="rule-text" wx:if="{{buyRule}}">
+                <view class="title">购买规则</view>
+                <text class="text">{{buyRule}}</text>
+            </view>
+            <view class="rule-text" wx:if="{{returnRule}}" style="margin-top: 60rpx;">
+                <view class="title">退货规则</view>
+                <text class="text">{{returnRule}}</text>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="rule-bg" bindtap="closeRule"></view>
+</view>

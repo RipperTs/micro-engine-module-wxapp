@@ -1,0 +1,19 @@
+/* wxParse.wxss */
+@import "/utils/yoapp.wxss";
+@import "/wxParse/wxParse.wxss";
+
+page {
+  background: #fff;
+}
+
+.container {
+  padding: 20rpx;
+}
+
+.article-content {
+  font-size: 28rpx;
+}
+
+.wxParse-img {
+  width: 708rpx;
+}

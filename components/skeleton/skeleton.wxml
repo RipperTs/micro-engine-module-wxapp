@@ -1,0 +1,9 @@
+<!--<canvas canvas-id="skeleton" disable-scroll="true"></canvas>-->
+<view wx:if='{{skeletonHave}}' class='skeletonBox {{skeleton?"show":"hide"}}' style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px; background-color: {{bgcolor}}; position: fixed; left:0; top:0; z-index:9998; overflow: hidden;">
+    <view wx:for="{{skeletonRectLists}}" wx:key="index" class="{{loading == 'chiaroscuro' ? 'chiaroscuro' : ''}}" style="width: {{item.width}}px; height: {{item.height}}px; background-color: #f2f2f2; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+
+    </view>
+    <view wx:for="{{skeletonCircleLists}}" wx:key="index" class="{{loading == 'chiaroscuro' ? 'chiaroscuro' : ''}}" style="width: {{item.width}}px; height: {{item.height}}px; background-color: #f2f2f2; border-radius: {{item.width}}px; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+
+    </view>
+</view>

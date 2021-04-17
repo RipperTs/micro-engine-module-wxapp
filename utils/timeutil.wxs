@@ -1,0 +1,25 @@
+var formatNumber = function (n) {
+    n = n.toString()
+    return n[1] ? n : '0' + n
+}
+/**
+ * 将时间戳(1570550400)格式转为 yyyy-MM-dd格式
+ */
+var formatDate = function (datetime, isTime = true) {
+    var date = getDate(datetime);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var s = date.getSeconds();
+    var sj = [year, month, day].map(formatNumber).join('-');
+    if (isTime) {
+        return sj + ' ' + [hour, minutes, s].map(formatNumber).join(':');
+    }
+    return sj;
+}
+
+module.exports = {
+    formatDate: formatDate
+}

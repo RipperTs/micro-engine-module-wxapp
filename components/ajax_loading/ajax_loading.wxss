@@ -1,0 +1,55 @@
+/* components/ajax_loading/ajax_loading.wxss */
+/* bot-loading */
+.bot-loading {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+.bot-loading .loading-cot {
+  height: 14px;
+  line-height: 1;
+  display: inline-block;
+}
+.bot-loading image {
+  width: 14px;
+  display: block;
+  float: left;
+}
+.bot-loading .text {
+  float: left;
+  line-height: 14px;
+  margin-left: 5px;
+  color: #999;
+  font-size: 12px;
+}
+/* bot-loading end */
+/* bot-noresult */
+.bot-noresult {
+  width: 100%;
+  height: 15px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 15px 0;
+}
+.bot-noresult .line {
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  z-index: -1;
+}
+.bot-noresult .text {
+  height: 15px;
+  line-height: 15px;
+  display: block;
+  padding: 0 10px;
+  color: #999;
+  font-size: 12px;
+}
+/* bot-noresult end */
+image {
+  opacity: 1
+}

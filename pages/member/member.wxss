@@ -1,0 +1,289 @@
+/* iconfont */
+/* member wxss */
+.container {
+    min-height: 100vh;
+    background: #f7f7f7;
+    padding-bottom: 100rpx;
+    position: relative;
+}
+
+.member-header {
+    width: 100%;
+    height: 250rpx;
+    position: relative;
+    z-index: 9;
+}
+
+.member-header .member-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 340rpx;
+}
+
+.member-header .detail-box {
+    display: flex;
+    padding: 60rpx 40rpx 0 40rpx;
+}
+
+.member-header .detail-box .detail {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20rpx;
+}
+
+.member-header .detail-box .name {
+    font-size: 28rpx;
+    color: #fff;
+    font-weight: bold;
+}
+
+.member-header .detail-box .level {
+    margin-top: 20rpx;
+}
+
+.member-header .detail-box .level .level-btn {
+    display: inline-block;
+    height: 40rpx;
+    line-height: 40rpx;
+    color: #fff;
+}
+
+.member-header .avatar-box {
+    width: 130rpx;
+    height: 130rpx;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5rpx solid #fff;
+    overflow: hidden;
+}
+
+.member-header .rule {
+    position: absolute;
+    left: 60rpx;
+    right: 60rpx;
+    bottom: 50rpx;
+}
+
+.member-header .rule .text {
+    float: left;
+}
+
+.member-header .rule navigator {
+    float: right;
+}
+
+.module-box {
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 230rpx;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.module-box .menu-box {
+    width: 92%;
+    min-height: 400rpx;
+    background: #fff;
+    border-radius: 8rpx;
+    padding: 30rpx;
+}
+
+.module-box .menu-box .frequency-box {
+    width: 100%;
+    height: 102rpx;
+    background: linear-gradient(307deg, #FF6A36 0%, #FF9334 100%);
+    border-radius: 8rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.module-box .menu-box .frequency-box image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-left: 35rpx;
+}
+
+.module-box .menu-box .frequency-box .text {
+    color: #fff;
+    margin-left: 20rpx;
+    font-size: 26rpx;
+}
+
+.module-box .menu-box .frequency-box .recharge-btn {
+    width: 164rpx;
+    height: 52rpx;
+    border-radius: 52rpx;
+    background: #fff;
+    text-align: center;
+    line-height: 52rpx;
+    color: #FF6A36;
+    font-weight: 500;
+    font-size: 24rpx;
+    position: absolute;
+    right: 20rpx;
+}
+
+.btn-vip {
+    width: 164rpx;
+    height: 55rpx;
+    border-radius: 30rpx 0 0 30rpx;
+    background: #FFCA2F;
+    position: absolute;
+    top: 70rpx;
+    right: 0;
+    text-align: center;
+    line-height: 55rpx;
+    font-weight: 500;
+    font-size: 24rpx;
+}
+
+.title-box {
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+}
+
+.title-box .vertical-line {
+    width: 6rpx;
+    height: 26rpx;
+    background: linear-gradient(180deg, #3372FC 0%, #2E6DF7 100%);
+    border-radius: 4rpx;
+    float: left;
+}
+
+.title-box .text {
+    float: left;
+    margin-left: 15rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.apps-box {
+    width: 100%;
+    min-height: 200rpx;
+    margin-top: 20rpx;
+}
+
+.apps-box .app {
+    width: 25% !important;
+    height: 80rpx !important;
+    float: left;
+    margin-top: 50rpx;
+}
+
+.apps-box .app .iconfont {
+    color: #3372FC;
+    width: 100%;
+    text-align: center;
+    font-size: 40rpx;
+}
+
+.apps-box .app .text {
+    width: 100%;
+    text-align: center;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+
+.btn-outlogin {
+    margin-top: 280rpx;
+    width: 100%;
+    height: 90rpx;
+    border-radius: 8rpx;
+    background: #3372FC;
+    color: #fff;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 26rpx;
+}
+
+/* not-logged-box */
+.not-logged-box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.not-logged-box .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.not-logged-box .not-logged {
+    width: 260px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -70px;
+}
+
+.not-logged-box .not-logged .title {
+    padding-top: 15px;
+    line-height: 1;
+    font-size: 14px;
+    text-align: center;
+}
+
+.not-logged-box .not-logged .text-box {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    padding: 0 40rpx;
+}
+
+.not-logged-box .not-logged .text-box .text {
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.not-logged-box .not-logged .btn-group {
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.not-logged-box .not-logged .btn-group .btn {
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+}
+
+.not-logged-box .not-logged .btn-group .login {
+    color: #3372FC;
+}
+
+button {
+    padding: 0 !important;
+}
+
+/* not-logged-box end */

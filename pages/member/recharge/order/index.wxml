@@ -1,0 +1,24 @@
+<l-loading show="{{isLoading}}" full-screen="{{true}}" opacity="0.8" color="#3F75F3" type="change"></l-loading>
+<view class="container">
+    <view class="recharge-order">
+        <scroll-view bindscrolltolower="bindDownLoad" scroll-y style="height: {{ scrollHeight }}px">
+            <view wx:for="{{ list.data }}" wx:key="this" class="order-item dis-flex flex-x-between flex-y-center">
+                <view class="item-left">
+                    <view class="rec-status">
+                        <text>{{ item.recharge_type.text }} {{ item.pay_status.text }}</text>
+                    </view>
+                    <view class="rec-time">
+                        <text>{{ item.pay_time.text }}</text>
+                    </view>
+                </view>
+                <view class="item-right">
+                    <text>￥{{ item.pay_price }}元</text>
+                </view>
+            </view>
+            <!-- 没有记录 -->
+            <view class="yoshop-notcont" wx:if="{{ !list.data.length && !isLoading }}">
+                <van-empty description="暂无充值记录"/>
+            </view>
+        </scroll-view>
+    </view>
+</view>

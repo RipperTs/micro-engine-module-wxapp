@@ -1,0 +1,12 @@
+<!--components/ajax_loading/ajax_loading.wxml-->
+<!-- ajax-loading -->
+<view class='bot-loading' hidden='{{botloadinghidden}}'>
+  <view class='loading-cot'>
+    <image src='{{loadingsrc}}' mode='widthFix'></image>
+    <text class='text' style='color:{{color}}'>正在加载</text>
+  </view> 
+</view>
+<view class='bot-noresult' hidden='{{botnoresulthidden}}'>
+  <text class='text' style='color:{{color}}'>--- 到底了，没有更多了 ---</text>
+</view>
+<!-- ajax-loading end -->

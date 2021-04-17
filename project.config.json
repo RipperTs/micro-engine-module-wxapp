@@ -1,0 +1,158 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "enhance": false,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": false,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "useMultiFrameRuntime": false,
+        "useApiHook": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "useCompilerModule": true,
+        "userConfirmedUseCompilerModuleSwitch": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "bundle": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.14.0",
+    "appid": "wx2ff7bd269a20a521",
+    "projectname": "funeng_wechat",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "砍价列表",
+                    "pathName": "pages/bargain/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "pages/index/index",
+                    "pathName": "pages/dealer/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/article/index",
+                    "pathName": "pages/article/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/member/member",
+                    "pathName": "pages/member/member",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "新增赋能",
+                    "pathName": "pages/generate/create",
+                    "query": "features_id=10003",
+                    "scene": null
+                },
+                {
+                    "name": "赋能详情",
+                    "pathName": "pages/generate/detail",
+                    "query": "key=5fbcc1ef06b51",
+                    "scene": null
+                },
+                {
+                    "name": "访问记录",
+                    "pathName": "pages/generate/log",
+                    "query": "generate_id=9",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dealer/index/index",
+                    "pathName": "pages/dealer/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/member/recharge/order/index",
+                    "pathName": "pages/member/recharge/order/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/generate/list",
+                    "pathName": "pages/generate/list",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dealer/order/order",
+                    "pathName": "pages/dealer/order/order",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/member/recharge/index",
+                    "pathName": "pages/member/recharge/index",
+                    "query": "type=20",
+                    "scene": null
+                },
+                {
+                    "name": "pages/generate/detail",
+                    "pathName": "pages/generate/detail",
+                    "query": "key=5fc0cde934ff6",
+                    "scene": null
+                },
+                {
+                    "name": "pages/generate/edit",
+                    "pathName": "pages/generate/edit",
+                    "query": "key=5fbf77ed94624&features_id=10004",
+                    "scene": null
+                },
+                {
+                    "name": "pages/member/recharge/order/index",
+                    "pathName": "pages/member/recharge/order/index",
+                    "query": "key=5fbf77ed94624&features_id=10004",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

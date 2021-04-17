@@ -1,0 +1,14 @@
+<!-- bonus.wxml -->
+<skeleton selector="skeleton" loading="spin" bgcolor="#fff" skeletonHave="{{skeletonHave}}" skeleton="{{skeleton}}"></skeleton>
+<view class="container skeleton">
+    <!-- news -->
+    <view class="faq-list">
+        <view class="list-item" wx:for="{{faqList}}" wx:key="index" data-index="{{index}}" bindtap="statusChange">
+            <view class="title skeleton-rect">{{item.title}}</view>
+            <view wx:if="{{item.status}}" class="content skeleton-rect">
+                {{item.content}}
+            </view>
+        </view>
+    </view>
+    <!-- news end -->
+</view>
