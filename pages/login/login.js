@@ -6,7 +6,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        options: {}
+        options: {},
+        userInfo: {},
+        hasUserInfo: false,
+        canIUseGetUserProfile: false,
     },
 
     /**
@@ -17,6 +20,31 @@ Page({
         _this.setData({
             options
         });
+        if (wx.getUserProfile) {
+            this.setData({
+                canIUseGetUserProfile: true
+            })
+        }
+    },
+
+    // 新版授权登陆
+    getUserProfile() {
+        let _this = this,
+            loginInfo = {detail: {}};
+        wx.getUserProfile({
+            desc: '获取您的基础信息用户登陆和注册', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+            success: (res) => {
+                loginInfo.detail = res;
+                _this.setData({
+                    userInfo: res.userInfo,
+                    hasUserInfo: true
+                })
+                App.getUserInfo(loginInfo, () => {
+                    // 跳转回原页面
+                    _this.onNavigateBack(1);
+                });
+            }
+        })
     },
 
     /**
@@ -38,7 +66,7 @@ Page({
         // 跳转回原页面
         // _this.onNavigateBack(_this.data.options.delta);
         wx.switchTab({
-            url:'/pages/index/index'
+            url: '/pages/index/index'
         })
     },
 
@@ -50,7 +78,7 @@ Page({
         //     delta: Number(delta || 1)
         // });
         wx.switchTab({
-            url:'/pages/member/member'
+            url: '/pages/member/member'
         })
     },
 

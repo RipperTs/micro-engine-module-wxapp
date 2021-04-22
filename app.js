@@ -416,9 +416,6 @@ App({
      */
     getUserInfo(e, callback) {
         let App = this;
-        if (e.detail.errMsg !== 'getUserInfo:ok') {
-            return false;
-        }
         wx.showLoading({
             title: "正在登录",
             mask: true
