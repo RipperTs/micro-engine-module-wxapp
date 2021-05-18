@@ -32,7 +32,8 @@ Page({
         let _this = this,
             loginInfo = {detail: {}};
         wx.getUserProfile({
-            desc: '获取您的基础信息用户登陆和注册', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+            desc: '获取您的基础信息用户登陆和注册',
+            lang: 'zh_CN',
             success: (res) => {
                 loginInfo.detail = res;
                 _this.setData({
